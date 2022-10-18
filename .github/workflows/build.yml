@@ -23,6 +23,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}-openwrt-22.03
           FEEDNAME: packages_ci
+          PACKAGES: chinadns-ng dns2socks ipt2socks
 
       - name: Move created packages to project dir
         run: cp bin/packages/${{ matrix.arch }}/packages_ci/*.ipk . || true
