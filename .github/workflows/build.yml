@@ -11,7 +11,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - arch: ramips-mt7621
+          - arch: mips_24kc
 
     steps:
       - uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
       - name: Build
         uses: openwrt/gh-action-sdk@v3
         env:
-          ARCH: ${{ matrix.arch }}-22.03.2
+          ARCH: ${{ matrix.arch }}-openwrt-22.03
           FEEDNAME: packages_ci
 
       - name: Move created packages to project dir
