@@ -21,7 +21,7 @@ jobs:
       - name: Build
         uses: openwrt/gh-action-sdk@master
         env:
-          ARCH: ${{ matrix.arch }}-openwrt-22.03
+          ARCH: ${{ matrix.arch }}-openwrt-21.02
           FEEDNAME: packages_ci
           PACKAGES: chinadns-ng dns2socks ipt2socks dns2tcp hysteria
 
